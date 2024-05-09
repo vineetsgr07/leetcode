@@ -19,17 +19,11 @@ var haveConflict = function(event1, event2) {
     let splitedEvent21 = setHoursMinutes(event2[0])
     let splitedEvent22 = setHoursMinutes(event2[1])
 
-    if(splitedEvent11 <= splitedEvent21 && splitedEvent21 <= splitedEvent12 ){
-        return true
-    }
-
-    if(splitedEvent11 <= splitedEvent22 && splitedEvent22 <= splitedEvent12 ){
-        return true
-    }
-
-    if(splitedEvent21 <= splitedEvent11 && splitedEvent12<=splitedEvent22){
-        return true
-    }
+    if(
+        splitedEvent11 <= splitedEvent21 && splitedEvent21 <= splitedEvent12 || 
+        splitedEvent11 <= splitedEvent22 && splitedEvent22 <= splitedEvent12 || 
+        splitedEvent21 <= splitedEvent11 && splitedEvent12<=splitedEvent22 
+    ) return true
 
     return false
 };
