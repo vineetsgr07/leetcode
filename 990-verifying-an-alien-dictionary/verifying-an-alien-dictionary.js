@@ -35,10 +35,7 @@ var isAlienSorted = function(words, order) {
             first++
             second++ 
         }
-        
-        if(word1.length > word2.length){
-            return false
-        }
+
 
         return true
     }
