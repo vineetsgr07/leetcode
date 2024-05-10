@@ -20,7 +20,6 @@ var isAlienSorted = function(words, order) {
                 indexOfWord1Character = lexiographicMap.get(word1[first])
                 indexOfWord2Character = lexiographicMap.get(word2[second])
                 
-                console.log("here", word1[first], word2[second])
                 if(indexOfWord1Character > indexOfWord2Character){
                     return false
                 }else{
@@ -35,7 +34,6 @@ var isAlienSorted = function(words, order) {
             first++
             second++ 
         }
-
 
         return true
     }
