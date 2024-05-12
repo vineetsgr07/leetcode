@@ -12,13 +12,10 @@ var uniqueOccurrences = function (arr) {
 
     let storeByValue = new Map()
     for (let item of store) {
-        let key = item[0]
-        let value = item[1]
-
-        if (storeByValue.get(value)) {
+        if (storeByValue.get(item[1])) {
             return false
         } else {
-            storeByValue.set(value, key)
+            storeByValue.set(item[1], item[0])
         }
     }
 
