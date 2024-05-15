@@ -4,9 +4,5 @@
  */
 var plusOne = function(digits) {
     
-    let lastDigit = digits.join("")
-    let result = BigInt(lastDigit) + BigInt(1)
-
-    return result.toString().split("")
-
+    return (BigInt(digits.join("")) + BigInt(1)).toString().split("")
 };
