@@ -17,7 +17,7 @@ var sumOfLeftLeaves = function (root) {
     const dfsLeft = (node, isLeft) => {
         if (!node) return
 
-   if (isLeft && !node.left && !node.right) {
+        if (isLeft && !node.left && !node.right) {
             sum += node.val;
         }
 
