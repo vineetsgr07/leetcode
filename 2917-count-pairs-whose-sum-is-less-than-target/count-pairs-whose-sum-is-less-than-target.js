@@ -9,7 +9,6 @@ var countPairs = function (nums, target) {
     let first = 0
     let last = nums.length - 1
     let count = 0
-    console.log(nums)
     while (first < last) {
         if (nums[first] + nums[last] < target) {
             count += last-first
