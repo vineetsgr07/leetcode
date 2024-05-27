@@ -26,11 +26,8 @@ var zigzagLevelOrder = function (root) {
             queue[i]?.right && localQueue.push(queue[i].right)
             queue[i]?.val !== undefined && localAnswer.push(queue[i].val)
         }
-        if (mod % 2 == 0) {
-            ans.push(localAnswer.reverse())
-        } else {
-            ans.push(localAnswer)
-        }
+        ans.push(mod % 2 == 0 ? localAnswer.reverse() : localAnswer)
+
         queue = localQueue
     }
 
