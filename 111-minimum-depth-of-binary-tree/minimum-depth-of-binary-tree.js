@@ -29,7 +29,6 @@ var minDepth = function (root) {
         return
     }
 
-
     dfs(root, 1)
 
     return min
