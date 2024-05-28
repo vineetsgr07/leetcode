@@ -12,14 +12,9 @@ var topKFrequent = function (nums, k) {
     }
 
     let res = []
-
     for (let [key, val] of store) {
         res.push([key, val])
     }
 
-    res.sort((a, b) => b[1] - a[1])
-
-    return res.slice(0, k).map(a => a[0])
-
-
+    return res.sort((a, b) => b[1] - a[1]).slice(0, k).map(a => a[0])
 };
