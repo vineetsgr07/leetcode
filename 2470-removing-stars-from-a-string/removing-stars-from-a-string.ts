@@ -7,16 +7,17 @@ function removeStars(s: string): string {
 
     for (let i = n; i >= 0; i--) {
 
-        if (arr[i] === "*") {
-            count++
-        }
-
         if (arr[i] !== "*" && count > 0) {
             arr[i] = ""
             count--
         }
+
+        if(arr[i] == "*"){
+            arr[i] = ""
+            count++
+        }
     }
 
-    return arr.join("").replaceAll("*","")
+    return arr.join("")
 
 };
