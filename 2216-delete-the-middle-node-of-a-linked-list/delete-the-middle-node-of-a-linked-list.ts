@@ -11,25 +11,16 @@
  */
 
 function deleteMiddle(head: ListNode | null): ListNode | null {
-    if (!head || !head.next) return null; // If the list is empty or has only one node, return null
+    let dummy = new ListNode(0, head)
+    let fast = dummy.next;
+    let slow = dummy;
 
-    let count = 0;
-    let current = head;
-
-    while (current) {
-        current = current.next;
-        count++;
+    while (fast !== null && fast.next !== null) {
+        fast = fast.next.next;
+        slow = slow.next
     }
 
-    let pivot = Math.floor(count / 2);
+    slow.next = slow.next.next
 
-    current = head;
-
-    for (let i = 0; i < pivot - 1; i++) {
-        current = current.next;
-    }
-
-    current.next = current.next.next;
-
-    return head;
+    return dummy.next;
 }
