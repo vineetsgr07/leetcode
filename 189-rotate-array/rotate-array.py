@@ -5,8 +5,6 @@ class Solution:
         """
         k = k % len(nums)
 
-        print("here",20%300)
-
         if k != 0:
             nums[:k], nums[k:] = nums[-k:], nums[:-k]
 
