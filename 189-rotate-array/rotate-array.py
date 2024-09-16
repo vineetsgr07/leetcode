@@ -4,6 +4,9 @@ class Solution:
         Do not return anything, modify nums in-place instead.
         """
         k = k % len(nums)
+
+        print("here",20%300)
+
         if k != 0:
             nums[:k], nums[k:] = nums[-k:], nums[:-k]
 
