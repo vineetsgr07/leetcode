@@ -3,13 +3,9 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        index = 0
-        while index < k:
-            last_element = nums.pop(len(nums) - 1)
-            nums.insert(0, last_element)
-            index += 1
-        
-        return nums
+        k = k % len(nums)
+        if k != 0:
+            nums[:k], nums[k:] = nums[-k:], nums[:-k]
 
 
             
